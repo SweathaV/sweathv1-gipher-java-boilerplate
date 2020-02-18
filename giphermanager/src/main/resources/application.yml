@@ -1,0 +1,10 @@
+spring:
+ data:
+  mongodb:
+   database: SBA
+   port: 27017
+   host: localhost   
+ application:
+    name: gipher-service
+server:
+  port: 8088 

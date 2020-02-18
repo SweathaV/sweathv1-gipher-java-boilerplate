@@ -1,0 +1,44 @@
+<div class="sing-up-form">
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h3>Sign Up Now</h3>
+					<strong *ngIf="submitMessage" class="error-message">{{submitMessage}}</strong>
+					<strong *ngIf="submitSuccessMessage" class="success-message">{{submitSuccessMessage}}</strong>
+					<form (ngSubmit)="Submit()" [formGroup]="RegisterForm">
+						<div>
+							<label for="userId">User Id</label> <input type="text"
+								class="form-control"
+								[ngClass]="{'is-invalid': submitted && usernamehaserror()}"
+								formControlName="userId" />
+							<div *ngIf="submitted && usernamehaserror()"
+								class="invalid-feedback">User id is required</div>
+						</div>
+						<div>
+							<label for="userPassword">Password</label> <input type="password"
+								class="form-control"
+								[ngClass]="{'is-invalid': submitted && passwordhaserror()}"
+								formControlName="userPassword" />
+							<div *ngIf="submitted && passwordhaserror()"
+								class="invalid-feedback">Password is required</div>
+						</div>
+						<div>
+							<label for="userEmail">Email-Id</label> <input type="text"
+								class="form-control"
+								[ngClass]="{'is-invalid': submitted && useremailhaserror()}"
+								formControlName="userEmail" />
+							<div *ngIf="submitted && useremailhaserror()"
+								class="invalid-feedback">User Email-Id is required</div>
+						</div>
+						<br>
+						<div>
+							<button type="submit" [disabled]="!RegisterForm.valid" style="margin-right:16px">Submit</button>
+							<button routerLink="/login" style='margin-right:16px'>Register</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

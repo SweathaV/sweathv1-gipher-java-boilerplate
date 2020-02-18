@@ -1,0 +1,10 @@
+<mat-toolbar color="primary"> <mat-toolbar-row layout-fill
+	layout-align="center center"> <a class="logo"> <img
+	class="logoImg" src="assets\images\giphylogo.gif">
+</a>
+<button class="header-button" mat-button>Gipher App </button>
+<div *ngIf="isUserLoggedIn()" class="logout">
+	<button type="button" (click)="logout()" class="mat-button">Logout</button>
+</div>
+</mat-toolbar-row> </mat-toolbar>
+

@@ -1,0 +1,42 @@
+.logout {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: flex-end;
+}
+
+.mat-toolbar{
+    background-color: black;
+    height: 15vh;
+    display: flex;
+    text-align: right;
+}
+
+.mat-toolbar-row{
+    height: 20vh;
+}
+
+.button{
+	cursor: pointer;
+}
+.button:hover {
+	background-color: antiquewhite;
+}
+.floatRight{
+	float:right;
+}
+
+.header-button{
+	font-family: 'Merienda One', cursive;
+    font-size: 1.2em; 
+}
+
+.logo{
+    height: 15vh;   
+}
+
+.logoImg{
+    height: 15vh;
+    float:center;
+   
+}
