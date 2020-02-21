@@ -66,7 +66,6 @@ public class GipherController {
 			e.printStackTrace();
 			return new ResponseEntity<>(HttpStatus.CONFLICT);
 		}
-
 	}
 
 	@PutMapping("/api/v1/gipher/{id}")

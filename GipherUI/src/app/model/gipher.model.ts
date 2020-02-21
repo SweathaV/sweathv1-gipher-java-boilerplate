@@ -3,5 +3,6 @@ export class Gipher{
 	embedURL: string;
 	bookMarkedBy: string;
 	favouritedBy: string;
+	recommendBy: string;
 	userId: string;
 }

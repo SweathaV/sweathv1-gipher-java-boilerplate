@@ -1,5 +1,4 @@
-package com.stackroute.giphermanager.model;
-
+package com.stackroute.gipherrecommendersystem.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -10,19 +9,14 @@ public class Gipher {
 	@Id
 	private String gipherId;
 	private String embedURL;
-	private String bookMarkedBy;
-	private String favouritedBy;
 	private String recommendBy;
-
 	private String userId;
 	
 	public Gipher(){}
 
-	public Gipher(String gipherId, String embedURL, String bookMarkedBy, String favouritedBy, String userId) {
+	public Gipher(String gipherId, String embedURL, String bookMarkedBy, String favouritedBy, String userId, String recommendBy) {
 		this.gipherId = gipherId;
 		this.embedURL = embedURL;
-		this.bookMarkedBy = bookMarkedBy;
-		this.favouritedBy = favouritedBy;
 		this.recommendBy = recommendBy;
 		this.userId = userId;
 	}
@@ -43,20 +37,12 @@ public class Gipher {
 		this.embedURL = embedURL;
 	}
 
-	public String getBookMarkedBy() {
-		return bookMarkedBy;
+	public String getRecommendBy() {
+		return recommendBy;
 	}
 
-	public void setBookMarkedBy(String bookMarkedBy) {
-		this.bookMarkedBy = bookMarkedBy;
-	}
-
-	public String getFavouritedBy() {
-		return favouritedBy;
-	}
-
-	public void setFavouritedBy(String favouritedBy) {
-		this.favouritedBy = favouritedBy;
+	public void setRecommendBy(String recommendBy) {
+		this.recommendBy = recommendBy;
 	}
 
 	public String getUserId() {
@@ -66,11 +52,4 @@ public class Gipher {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}	
-	public String getRecommendBy() {
-		return recommendBy;
-	}
-
-	public void setRecommendBy(String recommendBy) {
-		this.recommendBy = recommendBy;
-	}
 }

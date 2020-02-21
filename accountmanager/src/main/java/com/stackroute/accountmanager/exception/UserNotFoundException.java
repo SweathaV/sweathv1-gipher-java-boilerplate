@@ -6,3 +6,8 @@ public class UserNotFoundException extends Exception {
         super(message);
     }
 }
+
+/*
+ * @ResponseStatus(code = HttpStatus.NOT_FOUND, reason = "User Not Found")
+ * public class UserNotFoundException extends Exception { }
+ */

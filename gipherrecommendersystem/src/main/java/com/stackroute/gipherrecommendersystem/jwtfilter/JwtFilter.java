@@ -1,4 +1,4 @@
-package com.stackroute.giphermanager.jwtfilter;
+package com.stackroute.gipherrecommendersystem.jwtfilter;
 
 import org.springframework.web.filter.GenericFilterBean;
 

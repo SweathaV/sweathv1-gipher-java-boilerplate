@@ -30,6 +30,7 @@ import { CanActivateRouteGuard } from './can-activate-route.guard';
 import { HeaderComponent } from './header/header.component';
 import {MatIconModule} from '@angular/material/icon';
 import { GipherViewComponent } from './gipher-view/gipher-view.component';
+import { RecommendComponent } from './recommend/recommend.component';
 
 const appRoutes: Routes = [
     {
@@ -61,7 +62,8 @@ const appRoutes: Routes = [
     FavouriteComponent,
     DashboardComponent,
     HeaderComponent,
-    GipherViewComponent
+    GipherViewComponent,
+    RecommendComponent
   ],
   imports: [
     BrowserModule,

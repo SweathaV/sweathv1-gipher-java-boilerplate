@@ -32,6 +32,8 @@ export class RegisterComponent implements OnInit {
           this.submitMessage = err.error.message;
         } else if (err.status === 404) {
           this.submitMessage = err.message;
+        }else if (err.status === 409) {
+          this.submitMessage = "User Already Exists.";
         }
       }
     );

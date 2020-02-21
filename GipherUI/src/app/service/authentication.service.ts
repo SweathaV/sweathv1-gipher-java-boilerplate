@@ -40,6 +40,7 @@ export class AuthenticationService {
   }
 
   isUserAuthenticated(token): Promise<boolean> {
+    console.log('Received token in authService', token);
     if (null != token) {
       const obs: Observable<any> = this.httpclient.post('http://localhost:8089/api/v1/auth/authenticate', {}, {
         headers: new HttpHeaders().set('Authorization', `Bearer ${token}`)

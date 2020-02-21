@@ -34,7 +34,16 @@ export class GipherViewComponent implements OnInit {
     });
   }
 
+recommendGipher(gipher:Gipher){
+    gipher.recommendBy = gipher.userId;
+    this.gipherService.updateGipher(gipher).subscribe(data =>{
+      this.updateRecommendedGiphers(data);
+    },err=>{
+      console.log("recommendGipher: "+err);
+    });
+}
   updateExistingGiphers(gipher:Gipher){
+    console.log("updating existing giphers")
     for(var i=0;i<this.searchedGiphers.length;i++){
       if(gipher.gipherId == this.searchedGiphers[i].gipherId){
         this.searchedGiphers[i]=gipher;
@@ -42,7 +51,17 @@ export class GipherViewComponent implements OnInit {
       }
     }
   }
-
+  
+  updateRecommendedGiphers(gipher:Gipher){
+    console.log("updating recommended giphers")
+    console.log(gipher);
+    for(var i=0;i<this.searchedGiphers.length;i++){
+      if(gipher.gipherId == this.searchedGiphers[i].gipherId){
+        this.searchedGiphers[i]=gipher;
+        break;
+      }
+    }
+  }
   ngOnInit() {
   }
 

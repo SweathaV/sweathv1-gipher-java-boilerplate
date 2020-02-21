@@ -1,4 +1,4 @@
-package com.stackroute.giphermanager.helper;
+package com.stackroute.gipherrecommendersystem.helper;
 
 import java.lang.reflect.Type;
 import java.text.MessageFormat;
@@ -15,8 +15,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
-import com.stackroute.giphermanager.model.Gipher;
-import com.stackroute.giphermanager.external.model.GipherExternal;
+import com.stackroute.gipherrecommendersystem.model.Gipher;
+import com.stackroute.gipherrecommendersystem.external.model.GipherExternal;
 
 @SuppressWarnings("unchecked")
 @Component

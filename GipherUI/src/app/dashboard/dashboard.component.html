@@ -16,10 +16,26 @@
 		</div>
 	</div>
 </div>
-
 <mat-tab-group mat-align-tabs="center" animationDuration="2000ms">
-<mat-tab label="Searched Gif's"> <ng-template matTabContent>
-<app-gipher-view [searchedGiphers]="searchedGiphers"></app-gipher-view>
-</ng-template> </mat-tab> <mat-tab label="Bookmarks"> <ng-template matTabContent>
-<app-bookmark></app-bookmark> </ng-template> </mat-tab> <mat-tab label="Favourites"> <ng-template
-	matTabContent> <app-favourite></app-favourite> </ng-template> </mat-tab> </mat-tab-group>
+	<mat-icon>Recommended</mat-icon>
+	<mat-tab label="Recommended">
+		<ng-template matTabContent>
+			<app-recommend></app-recommend>
+		</ng-template>
+	</mat-tab>
+	<mat-tab label="Recently Searched Gif">
+		<ng-template matTabContent>
+			<app-gipher-view [searchedGiphers]="searchedGiphers"></app-gipher-view>
+		</ng-template>
+	</mat-tab>
+	<mat-tab label="Bookmarks">
+		<ng-template matTabContent>
+			<app-bookmark></app-bookmark>
+		</ng-template>
+	</mat-tab>
+	<mat-tab label="Favourites">
+		<ng-template matTabContent>
+			<app-favourite></app-favourite>
+		</ng-template>
+	</mat-tab>
+</mat-tab-group>
