@@ -5,6 +5,10 @@ spring:
    port: 27017
    host: localhost   
  application:
-    name: gipher-recommend-service
+    name: gipher-recommender-service
 server:
-  port: 8090 
+  port: 8090
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
