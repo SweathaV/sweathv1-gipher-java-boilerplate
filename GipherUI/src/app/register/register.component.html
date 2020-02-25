@@ -24,10 +24,10 @@
 								class="invalid-feedback">Password is required</div>
 						</div>
 						<div>
-							<label for="userEmail">Email-Id</label> <input type="text"
+							<label for="userEmail">Email-Id</label> 
+							<input type="email" name="email"
 								class="form-control"
-								[ngClass]="{'is-invalid': submitted && useremailhaserror()}"
-								formControlName="userEmail" />
+								[ngClass]="{'is-invalid': submitted && useremailhaserror()}" formControlName="userEmail" />
 							<div *ngIf="submitted && useremailhaserror()"
 								class="invalid-feedback">User Email-Id is required</div>
 						</div>

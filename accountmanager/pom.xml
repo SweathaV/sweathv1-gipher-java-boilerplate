@@ -31,6 +31,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+
 		<!-- Dependency for jaxb-impl to be added(if using JDK9) -->
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
