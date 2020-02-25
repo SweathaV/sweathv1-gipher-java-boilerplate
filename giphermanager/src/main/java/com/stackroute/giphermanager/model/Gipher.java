@@ -18,7 +18,7 @@ public class Gipher {
 	
 	public Gipher(){}
 
-	public Gipher(String gipherId, String embedURL, String bookMarkedBy, String favouritedBy, String userId) {
+	public Gipher(String gipherId, String embedURL, String bookMarkedBy, String favouritedBy, String userId, String recommendBy) {
 		this.gipherId = gipherId;
 		this.embedURL = embedURL;
 		this.bookMarkedBy = bookMarkedBy;
