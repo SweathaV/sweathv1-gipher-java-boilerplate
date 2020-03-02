@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.stackroute</groupId>
+ 	<groupId>com.stackroute</groupId>
 	<artifactId>gipher</artifactId>
 	<version>1.0</version>
 	<packaging>pom</packaging>

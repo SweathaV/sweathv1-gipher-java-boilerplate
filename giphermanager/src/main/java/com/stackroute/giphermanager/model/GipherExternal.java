@@ -1,4 +1,4 @@
-package com.stackroute.giphermanager.external.model;
+package com.stackroute.giphermanager.model;
 
 public class GipherExternal {
 	
@@ -7,6 +7,12 @@ public class GipherExternal {
 	
 	public GipherExternal() {}
 	
+	public GipherExternal(String id, String embed_url) {
+		super();
+		this.id = id;
+		this.embed_url = embed_url;
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -18,6 +24,11 @@ public class GipherExternal {
 	}
 	public void setEmbed_url(String embed_url) {
 		this.embed_url = embed_url;
+	}
+
+	@Override
+	public String toString() {
+		return "GipherExternal [id=" + id + ", embed_url=" + embed_url + "]";
 	}
 	
 	

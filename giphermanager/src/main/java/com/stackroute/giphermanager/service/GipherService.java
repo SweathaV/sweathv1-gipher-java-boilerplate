@@ -13,7 +13,7 @@ public interface GipherService {
 		
 		Gipher updateGipher(Gipher Gipher,String gipherId) throws GipherNotFoundExeption;
 
-	    void deleteGipher(String gipherId) throws GipherNotFoundExeption;
+	    boolean deleteGipher(String gipherId) throws GipherNotFoundExeption;
 
 	    void deleteAllGiphers() throws GipherNotFoundExeption;
 	    

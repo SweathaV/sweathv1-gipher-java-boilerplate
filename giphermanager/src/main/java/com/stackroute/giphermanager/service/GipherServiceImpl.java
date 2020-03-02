@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
-
 import com.stackroute.giphermanager.exception.GipherNotCreatedException;
 import com.stackroute.giphermanager.exception.GipherNotFoundExeption;
 import com.stackroute.giphermanager.helper.GipherHelper;
@@ -23,6 +22,12 @@ public class GipherServiceImpl implements GipherService {
 	@Autowired
 	GipherHelper gipherHelper;
 	
+	public GipherServiceImpl(GipherRepository gipherRepository, GipherHelper gipherHelper) {
+		super();
+		this.gipherRepository = gipherRepository;
+		this.gipherHelper = gipherHelper;
+	}
+
 	@Override
 	public List<Gipher> getAllGiphers() throws GipherNotFoundExeption {
 		return gipherRepository.findAll();
@@ -55,9 +60,16 @@ public class GipherServiceImpl implements GipherService {
 		
 	}
 
+	
 	@Override
-	public void deleteGipher(String gipherId) throws GipherNotFoundExeption{
-		gipherRepository.deleteById(gipherId);
+	public boolean deleteGipher(String gipherId) throws GipherNotFoundExeption{
+	//	gipherRepository.deleteById(gipherId);
+		try {
+			gipherRepository.deleteById(gipherId);
+			return true;
+		} catch (Exception e) {
+			throw new GipherNotFoundExeption("GipherNotFoundExeption");
+		}
 	}
 
 
