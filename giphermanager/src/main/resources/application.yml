@@ -7,7 +7,7 @@ spring:
  application:
     name: gipher-manager-service
 server:
-  port: 8088
+  port: 9085
 eureka:
   client:
     service-url:

@@ -18,7 +18,7 @@ spring:
       discovery:
         enable: true
 server:
-  port: 8089
+  port: 9084
 eureka:
   client:
     service-url:

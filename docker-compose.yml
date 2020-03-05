@@ -1,7 +1,7 @@
 version: '3'
 services:
   Gipher_accountmanager:
-    image: accountmanager:v1
+    image: sweathv1/accountmanager:v2
     restart: always
     network_mode: host
     container_name: accountmanagercontainer
@@ -15,7 +15,7 @@ services:
       test: "exit 0"
 
   Gipher_giphermanager:
-    image: giphermanagerservice:v1
+    image: sweathv1/giphermanager:v2
     restart: always
     network_mode: host
     container_name: giphermanagercontainer
@@ -29,7 +29,7 @@ services:
       test: "exit 0"
 
   Gipher_gipherrecommendersystem:
-    image: gipherrecommendersystem:v1
+    image: sweathv1/gipherrecommender:v2
     restart: always
     network_mode: host
     container_name: gipherrecommendersystemcontainer
@@ -43,7 +43,7 @@ services:
       test: "exit 0"
 
   Gipher_angular:
-    image: gipherangularservice:v2
+    image: sweathv1/gipherui:v2
     network_mode: host
     container_name: gipher_angularservicecontainer
     ports:
@@ -52,7 +52,7 @@ services:
       test: "exit 0"
 
   Gipher_EurekaService:
-    image: giphereurekaservice:v1
+    image: sweathv1/giphereurekaserver:v2
     restart: always
     network_mode: host
     container_name: gipher_eurekaservicecontainer
@@ -62,7 +62,7 @@ services:
       test: "exit 0"
 
   Gipher_ZuulService:
-    image: gipherzuulservice:v1
+    image: sweathv1/gipherzuulserver:v2
     restart: always
     network_mode: host
     container_name: gipher_zuulservicecontainer

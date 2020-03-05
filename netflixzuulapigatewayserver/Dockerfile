@@ -1,6 +1,6 @@
 FROM java:8-jre
 WORKDIR usr/src
-ADD ./target/netflix-zuul-api-gateway-server-0.0.1-SNAPSHOT.jar /usr/src/netflix-zuul-api-gateway-server-0.0.1-SNAPSHOT.jar
-RUN chmod +x /usr/src/netflix-zuul-api-gateway-server-0.0.1-SNAPSHOT.jar
+ADD ./target/zuulapigatewayservice-1.0.jar /usr/src/zuulapigatewayservice-1.0.jar
+RUN chmod +x /usr/src/zuulapigatewayservice-1.0.jar
 EXPOSE 8765
-ENTRYPOINT ["java","-Xmx200m", "-jar", "/usr/src/netflix-zuul-api-gateway-server-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-Xmx200m", "-jar", "/usr/src/zuulapigatewayservice-1.0.jar"]
