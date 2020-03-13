@@ -16,11 +16,12 @@ export class AuthenticationService {
   }
 
   registerUser(data) {
-    return this.httpclient.post('http://localhost:8089/api/v1/auth/register', data);
+    console.log(" Authenticating the user", data);
+    return this.httpclient.post('http://localhost:9084/api/v1/auth/register', data);
   }
 
   authenticateUser(data) {
-    return this.httpclient.post('http://localhost:8089/api/v1/auth/login', data);
+    return this.httpclient.post('http://localhost:9084/api/v1/auth/login', data);
   }
 
   setBearerToken(token) {
@@ -42,7 +43,7 @@ export class AuthenticationService {
   isUserAuthenticated(token): Promise<boolean> {
     console.log('Received token in authService', token);
     if (null != token) {
-      const obs: Observable<any> = this.httpclient.post('http://localhost:8089/api/v1/auth/authenticate', {}, {
+      const obs: Observable<any> = this.httpclient.post('http://localhost:9084/api/v1/auth/authenticate', {}, {
         headers: new HttpHeaders().set('Authorization', `Bearer ${token}`)
       });
       return obs.pipe(map(response => {

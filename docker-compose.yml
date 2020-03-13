@@ -1,7 +1,7 @@
 version: '3'
 services:
   Gipher_accountmanager:
-    image: sweathv1/accountmanager:v2
+    image: sweathv1/accountmanager:v5
     restart: always
     network_mode: host
     container_name: accountmanagercontainer
@@ -15,7 +15,7 @@ services:
       test: "exit 0"
 
   Gipher_giphermanager:
-    image: sweathv1/giphermanager:v2
+    image: sweathv1/giphermanager:v3
     restart: always
     network_mode: host
     container_name: giphermanagercontainer
@@ -29,7 +29,7 @@ services:
       test: "exit 0"
 
   Gipher_gipherrecommendersystem:
-    image: sweathv1/gipherrecommender:v2
+    image: sweathv1/gipherrecommender:v3
     restart: always
     network_mode: host
     container_name: gipherrecommendersystemcontainer
@@ -43,7 +43,7 @@ services:
       test: "exit 0"
 
   Gipher_angular:
-    image: sweathv1/gipherui:v2
+    image: sweathv1/gipherui:v4
     network_mode: host
     container_name: gipher_angularservicecontainer
     ports:
@@ -52,17 +52,17 @@ services:
       test: "exit 0"
 
   Gipher_EurekaService:
-    image: sweathv1/giphereurekaserver:v2
+    image: sweathv1/giphereurekaserver:v3
     restart: always
     network_mode: host
     container_name: gipher_eurekaservicecontainer
     ports:
-      - 9009:9009
+      - 8761:8761
     healthcheck:
       test: "exit 0"
 
   Gipher_ZuulService:
-    image: sweathv1/gipherzuulserver:v2
+    image: sweathv1/gipherzuulserver:v3
     restart: always
     network_mode: host
     container_name: gipher_zuulservicecontainer
@@ -87,13 +87,12 @@ services:
     ports:
       - 3306:3306
     environment:
-        MYSQL_DATABASE: gipherUserDb
-        MYSQL_USER: approot
+        MYSQL_DATABASE: gipheruserdb
+        MYSQL_USER: root
         MYSQL_PASSWORD: root123
         MYSQL_ROOT_PASSWORD: root123
     healthcheck:
       test: "exit 0"
-
 
   rabbitmq:
     image: rabbitmq:management
@@ -102,6 +101,3 @@ services:
       - "15672:15672"
     healthcheck:
       test: "exit 0"
-
-
-

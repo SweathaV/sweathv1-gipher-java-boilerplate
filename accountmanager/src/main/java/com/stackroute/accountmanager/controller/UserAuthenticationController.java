@@ -26,7 +26,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins="*")
 @RequestMapping("api/v1/auth")
 public class UserAuthenticationController {
 
@@ -81,6 +81,7 @@ public class UserAuthenticationController {
 
 		String authHeader = req.getHeader("Authorization");
 
+		System.out.println("Getting header authentication");
 		if (authHeader == null || !authHeader.startsWith("Bearer ")) {
 			throw new ServletException("Authorization token is missing(accountmanager)");
 		}

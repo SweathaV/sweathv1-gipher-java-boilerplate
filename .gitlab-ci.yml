@@ -1,20 +1,28 @@
 image: "maven:3.3.9-jdk-8"
+stages:
+    - test
+    - build
 services:
     - "mysql:5.7.26"
     - "mongo:4.0.4"
-maven-install:
-   script: "mvn install"
-   stage: install
-maven-test:
-   script: "mvn test"
-   stage: test
-stages:
-   - test
-   - install
 variables:
-   MYSQL_ROOT_PASSWORD: root
-   MYSQL_DATABASE: SBA
-   MYSQL_USER: root
-   MYSQL_PASSWORD: root
-   MYSQL_HOST: mysql
-   MYSQL_CI_URL: jdbc:mysql://mysql:3306/SBA
+    MYSQL_DATABASE: "gipherUserDb"
+    MYSQL_URL: "jdbc:mysql://mysql/gipherUserDb"
+    MYSQL_USER: "app_root"
+    MYSQL_PASSWORD: "root"
+    MYSQL_ROOT_PASSWORD: "root"
+    MONGO_DATABASENAME: "gipherdb"
+    MONGO_URL: "mongodb://mongo/gipherdb"
+cache:
+    paths:
+    - .m2/repository
+    - target
+maven-test:
+    stage: test
+    script: "mvn test"
+maven-build:
+    stage: build
+    script: "mvn package"
+    artifacts:
+        paths:
+        - target/*.jar

@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
-					<h3>Sign Up Now</h3>
+					<h3>REGISTRATION</h3>
 					<strong *ngIf="submitMessage" class="error-message">{{submitMessage}}</strong>
 					<strong *ngIf="submitSuccessMessage" class="success-message">{{submitSuccessMessage}}</strong>
 					<form (ngSubmit)="Submit()" [formGroup]="RegisterForm">
@@ -34,7 +34,7 @@
 						<br>
 						<div>
 							<button type="submit" [disabled]="!RegisterForm.valid" style="margin-right:16px">Submit</button>
-							<button routerLink="/login" style='margin-right:16px'>Login</button>
+							<button routerLink="/login" style='margin-right:16px'>Login</button> 
 						</div>
 					</form>
 				</div>

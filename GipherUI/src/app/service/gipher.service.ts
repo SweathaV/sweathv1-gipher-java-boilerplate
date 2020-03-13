@@ -20,7 +20,7 @@ export class GipherService {
         const token = this.authService.getBearerToken();
         console.log('Got token from gipherService.fetchGiphers', token);
         const headerValue = 'Bearer ' + token;
-        return this.httpClient.get<Array<Gipher>>(`http://localhost:8088/api/v1/gipher/externalapi/${this.authService.getUserId()}/${query}`, {
+        return this.httpClient.get<Array<Gipher>>(`http://localhost:9085/api/v1/gipher/externalapi/${this.authService.getUserId()}/${query}`, {
             headers: new HttpHeaders().set('Authorization', headerValue)
         })
     }
@@ -29,7 +29,7 @@ export class GipherService {
         const token = this.authService.getBearerToken();
         console.log('Got token from gipherService.updateGiphers', token);
         const headerValue = 'Bearer ' + token;
-        return this.httpClient.put<Gipher>(`http://localhost:8088/api/v1/gipher/`+gipher.gipherId, gipher,{
+        return this.httpClient.put<Gipher>(`http://localhost:9085/api/v1/gipher/`+gipher.gipherId, gipher,{
             headers: new HttpHeaders().set('Authorization', headerValue)
         })
     }
@@ -37,7 +37,7 @@ export class GipherService {
     fetchBookmarkedGipher(userId:string) {
         const token = this.authService.getBearerToken();
         const headerValue = 'Bearer ' + token;
-        return this.httpClient.get<Array<Gipher>>(`http://localhost:8088/api/v1/gipher/bookmark/${userId}`, {
+        return this.httpClient.get<Array<Gipher>>(`http://localhost:9085/api/v1/gipher/bookmark/${userId}`, {
             headers: new HttpHeaders().set('Authorization', headerValue)
         })
     }
@@ -45,7 +45,7 @@ export class GipherService {
     fetchFavouriteGipher(userId:string) {
         const token = this.authService.getBearerToken();
         const headerValue = 'Bearer ' + token;
-        return this.httpClient.get<Array<Gipher>>(`http://localhost:8088/api/v1/gipher/favourite/${userId}`, {
+        return this.httpClient.get<Array<Gipher>>(`http://localhost:9085/api/v1/gipher/favourite/${userId}`, {
             headers: new HttpHeaders().set('Authorization', headerValue)
         })
     }
@@ -55,7 +55,7 @@ export class GipherService {
         const headerValue = 'Bearer ' + token;
         console.log('Inside Recommend Gif');
         console.log('Bearere Token',token);
-        return this.httpClient.get<Array<Gipher>>(`http://localhost:8090/api/v1/gipherrecommendersystem/recommend/${userId}`, {
+        return this.httpClient.get<Array<Gipher>>(`http://localhost:9086/api/v1/gipherrecommendersystem/recommend/${userId}`, {
             headers: new HttpHeaders().set('Authorization', headerValue)
         })
     }

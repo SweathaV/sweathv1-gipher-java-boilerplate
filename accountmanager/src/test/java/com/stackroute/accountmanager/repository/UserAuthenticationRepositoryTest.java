@@ -12,6 +12,7 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.stackroute.accountmanager.exception.UserNotFoundException;
 import com.stackroute.accountmanager.model.User;
 
 @RunWith(SpringRunner.class)
