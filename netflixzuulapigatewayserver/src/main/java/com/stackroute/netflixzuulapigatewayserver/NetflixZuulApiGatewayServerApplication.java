@@ -46,9 +46,9 @@ public class NetflixZuulApiGatewayServerApplication {
 	  public FilterRegistrationBean jwtFilter() { FilterRegistrationBean
 	  registrationBean = new FilterRegistrationBean();
 	  registrationBean.setFilter(new JwtFilter());
-	  registrationBean.addUrlPatterns("/bookservice/api/books/*");
-	  registrationBean.addUrlPatterns("/favouriteservice/api/favourites/*");
-	  registrationBean.addUrlPatterns("/recommendedservice/api/recommendations/*");
+	  registrationBean.addUrlPatterns("/api/v1/auth/*");
+	  registrationBean.addUrlPatterns("/api/v1/auth/gipher/*");
+	  registrationBean.addUrlPatterns("/api/v1/gipherrecommendersystem/recommend/*");
 	  return registrationBean; 
 	  }
 	 

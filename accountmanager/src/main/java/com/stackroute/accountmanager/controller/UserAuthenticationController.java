@@ -26,7 +26,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 @RestController
-@CrossOrigin(origins="*")
+@CrossOrigin(origins="*", allowedHeaders = "*")
 @RequestMapping("api/v1/auth")
 public class UserAuthenticationController {
 
