@@ -2,10 +2,15 @@ package com.stackroute.netflixzuulapigatewayserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 
-//import com.stackroute.netflixzuulapigatewayserver.filter.JwtFilter;
+import com.stackroute.netflixzuulapigatewayserver.filter.JwtFilter;
 
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -23,7 +28,7 @@ public class NetflixZuulApiGatewayServerApplication {
 	 */
 	
 	
-/*	  @Bean 
+	  @Bean 
 	 public CorsFilter corsFilter() { final UrlBasedCorsConfigurationSource
 	  source = new UrlBasedCorsConfigurationSource(); final CorsConfiguration
 	  config = new CorsConfiguration(); config.setAllowCredentials(true);
@@ -45,6 +50,6 @@ public class NetflixZuulApiGatewayServerApplication {
 	  registrationBean.addUrlPatterns("/api/v1/gipherrecommendersystem/recommend/*");
 	  return registrationBean; 
 	  }
-	 */
+	
 
 }
