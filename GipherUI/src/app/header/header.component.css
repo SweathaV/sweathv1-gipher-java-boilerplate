@@ -2,41 +2,60 @@
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	justify-content: flex-end;
+    justify-content: flex-end;
+    font-family: 'Merienda One', cursive;
+    font-size: 1.5em; 
 }
 
 .mat-toolbar{
+    overflow: hidden;
     background-color: black;
     height: 15vh;
     display: flex;
     text-align: right;
+    padding: 20px 10px;
 }
+
+.mat-toolbar-row .logout{
+    float: right;
+}
+.logout .mat-button{
+    float: right;
+}
+
+@media screen and (max-width: 500px) {
+    .mat-toolbar-row .logoImg {
+      float: none;
+      text-align: left;
+    }
+    .mat-toolbar-row .header-button{
+      float: none;
+    }
+    .mat-toolbar-row .logoText{
+        float: none;
+        text-align: center;
+      }
+    
+    .mat-toolbar-row .logout{
+        float: none;
+        text-align: right;
+      }
+      .mat-toolbar-row .logout .mat-button{
+        float: none;
+      }
+  }
 
 .mat-toolbar-row{
-    height: 20vh;
+    height: 10vh;
 }
 
-.button{
-	cursor: pointer;
-}
-.button:hover {
-	background-color: antiquewhite;
-}
-.floatRight{
-	float:right;
-}
-
-.header-button{
+.logoText{
 	font-family: 'Merienda One', cursive;
-    font-size: 1.2em; 
-}
-
-.logo{
-    height: 15vh;   
+    font-size: 1.5em; 
 }
 
 .logoImg{
     height: 15vh;
     float:center;
-   
 }
+

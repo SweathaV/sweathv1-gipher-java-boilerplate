@@ -31,8 +31,35 @@ public class User {
     @Id
     private String userId;
     private String userPassword;
+    private String firstName;
+    private String lastName;
+    private String userRole;
     private String userEmail;
-    private Date userAddedDate;
+    public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getUserRole() {
+		return userRole;
+	}
+
+	public void setUserRole(String userRole) {
+		this.userRole = userRole;
+	}
+
+	private Date userAddedDate;
     
     public User() {
     }
@@ -67,11 +94,13 @@ public class User {
 	public void setUserAddedDate(Date userAddedDate) {
 		this.userAddedDate = userAddedDate;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", userPassword=" + userPassword + ", userEmail=" + userEmail
-				+ ", userAddedDate=" + userAddedDate + "]";
+		return "User [userId=" + userId + ", userPassword=" + userPassword + ", firstName=" + firstName + ", lastName="
+				+ lastName + ", userRole=" + userRole + ", userEmail=" + userEmail + ", userAddedDate=" + userAddedDate
+				+ "]";
 	}
+	
 	
 }

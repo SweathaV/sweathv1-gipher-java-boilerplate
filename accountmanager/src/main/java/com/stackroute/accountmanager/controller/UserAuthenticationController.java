@@ -26,11 +26,8 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 @RestController
-@CrossOrigin(origins="*", allowedHeaders = "*")
-@RequestMapping("api/v1/auth")
+@CrossOrigin(origins="*")
 public class UserAuthenticationController {
-
-	private static final long EXPIRATION_TIME = 30000;
 
 	HashMap<String, String> map = new HashMap<>();
 
@@ -41,7 +38,7 @@ public class UserAuthenticationController {
 		this.authenticationService = authicationService;
 	}
 
-	@PostMapping("/register")
+    @PostMapping("/api/v1/auth/register")
 	public ResponseEntity<?> registerUser(@RequestBody User user) {
 		Calendar calender = Calendar.getInstance();
 		Date date = calender.getTime();
@@ -56,13 +53,14 @@ public class UserAuthenticationController {
 		return new ResponseEntity<>(user, HttpStatus.CREATED);
 	}
 
-	@PostMapping("/login")
+	@PostMapping("/api/v1/auth/login")
 	public ResponseEntity<?> login(@RequestBody User user) {
 		try {
 			String token = getToken(user.getUserId(), user.getUserPassword());
 			map.clear();
 			map.put("token", token);
 			map.put("message", "User logged in successfully");
+			System.out.println("Got token in authservice" + token);
 		} catch (Exception e) {
 			e.printStackTrace();
 			map.clear();
@@ -74,14 +72,14 @@ public class UserAuthenticationController {
 
 	}
 
-	@PostMapping("/authenticate")
+	@PostMapping("/api/v1/auth/authenticate")
 	public ResponseEntity<?> isAuthenticate(ServletRequest request) throws ServletException {
 
 		HttpServletRequest req = (HttpServletRequest) request;
 
 		String authHeader = req.getHeader("Authorization");
 
-		System.out.println("Getting header authentication");
+		System.out.println("Getting header authentication" + authHeader);
 		if (authHeader == null || !authHeader.startsWith("Bearer ")) {
 			throw new ServletException("Authorization token is missing(accountmanager)");
 		}
@@ -95,18 +93,19 @@ public class UserAuthenticationController {
 	}
 
 	// Generate JWT token
+    // Generate JWT token
 	public String getToken(String username, String password) throws Exception {
-		if (username == null || password == null) {
-			throw new ServletException("Please pass the UserName and Password");
+		if(username == null || password == null) {
+			
 		}
 		User user = authenticationService.findByUserIdAndPassword(username, password);
-//.compact to build a string
-		if (user != null) {
-			String jwttoken = Jwts.builder().setSubject(username)
-					.setIssuedAt(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
+		if(user != null) {
+			String jwttoken = Jwts.builder().setSubject(username).setIssuedAt(new Date(System.currentTimeMillis()))
 					.signWith(SignatureAlgorithm.HS256, "secretkey").compact();
 			return jwttoken;
 		} else
-			throw new ServletException();
+			 throw new ServletException();
+        
+        
 	}
 }

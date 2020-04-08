@@ -25,7 +25,7 @@ export class LoginComponent {
       const userId = this.loginForm.value.userId;
       this.authenticationService.authenticateUser(this.loginForm.value).subscribe(
         data => {
-          console.log(data['token']);
+          console.log("sweatha printing" , data['token']);
           this.authenticationService.setBearerToken(data['token']);
           this.authenticationService.setUserId(userId);
           this.routerService.routeToDashboard();
