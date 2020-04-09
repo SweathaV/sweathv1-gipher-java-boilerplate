@@ -27,10 +27,13 @@ public class UserAuthenticationRepositoryTest {
 
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() throws Exception {       
         user = new User();
         user.setUserId("Jhon123");
         user.setUserPassword("123456");
+        user.setFirstName("Jhon1234");
+        user.setLastName("Jhon5678");
+        user.setUserRole("Tester");
         user.setUserEmail("Jhon123@example.com");
         user.setUserAddedDate(new Date());
     }

@@ -44,13 +44,22 @@ public class UserAuthenticationControllerTest {
 
     @Before
     public void setUp() throws Exception {
-
+/*
+ *     private String userId;
+    private String userPassword;
+    private String firstName;
+    private String lastName;
+    private String userRole;
+    private String userEmail;*/
         MockitoAnnotations.initMocks(this);
         mockMvc = MockMvcBuilders.standaloneSetup(authenticationController).build();
 
         user = new User();
         user.setUserId("Jhon123");
         user.setUserPassword("123456");
+        user.setFirstName("Jhon1234");
+        user.setLastName("Jhon5678");
+        user.setUserRole("Tester");
         user.setUserEmail("Jhon123@example.com");
         user.setUserAddedDate(new Date());
 
