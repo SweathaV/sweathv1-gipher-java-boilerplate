@@ -3,7 +3,6 @@
         overflow: hidden;
     }
 </style>
-
 <div class="row">
 	<strong *ngFor="let gipher of searchedGiphers">
 		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 card">
@@ -26,3 +25,14 @@
 		</div>
 	</strong>
 </div>
+<!-- 
+<section class="paper-flex-container">
+	<section class="paper-flex-search" *ngFor="let gipher of searchedGiphers">
+		<iframe [src]=getSantizeUrl(gipher.embedURL)></iframe>
+		<section class="paper-flex-interest">
+			<img src="assets/images/bookmark.gif" title="Bookmark" width="40%" height="50%" (click)="bookmarkGipher(gipher)" /> 
+			<img src="assets/images/favIcon.gif" title="Add To favourites" width="40%" height="50%" (click)="favouriteGipher(gipher)" /> 
+			<img src="assets/images/like.gif" title="Like" width="40%" height="50%" (click)="recommendGipher(gipher)" />
+		</section>
+	</section>
+</section> -->

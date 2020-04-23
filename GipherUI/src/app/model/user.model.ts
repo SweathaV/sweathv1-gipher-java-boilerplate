@@ -3,5 +3,8 @@ import { Injectable } from "@angular/core";
 export class User{
     userId:string;
     userPassword:string;
+    firstName:string;
+    lastName:string;
+    userRole:string;
     userEmail:string;
 }

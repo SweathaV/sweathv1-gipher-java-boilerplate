@@ -3,6 +3,7 @@ package com.stackroute.accountmanager.model;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
@@ -28,7 +29,7 @@ public class User {
 	 */
 	
 
-    @Id
+	@Id 
     private String userId;
     private String userPassword;
     private String firstName;

@@ -12,7 +12,6 @@ import com.stackroute.accountmanager.model.User;
 * This class is implementing the JpaRepository interface for User.
 * Annotate this class with @Repository annotation
 * */
-@Repository
 public interface UserAutheticationRepository extends JpaRepository<User, String> {
 
 

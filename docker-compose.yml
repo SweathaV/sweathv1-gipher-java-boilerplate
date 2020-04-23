@@ -1,10 +1,10 @@
 version: '3'
 services:
   Gipher_accountmanager:
-    image: sweathv1/accountmanager:v6
+    image: sweathv1/accountmanager:v9
     restart: always
     network_mode: host
-    container_name: accountmanagercontainer
+    container_name: gipheraccountmanagercontainer
     depends_on:
       - Gipher_mysqldb
       - Gipher_EurekaService
@@ -15,7 +15,7 @@ services:
       test: "exit 0"
 
   Gipher_giphermanager:
-    image: sweathv1/giphermanager:v6
+    image: sweathv1/giphermanager:v7
     restart: always
     network_mode: host
     container_name: giphermanagercontainer
@@ -43,7 +43,7 @@ services:
       test: "exit 0"
 
   Gipher_angular:
-    image: sweathv1/gipherui:v7
+    image: sweathv1/gipherui:v9
     network_mode: host
     container_name: gipher_angularservicecontainer
     ports:
@@ -88,7 +88,7 @@ services:
       - 3306:3306
     environment:
         MYSQL_DATABASE: gipheruserdb
-        MYSQL_USER: root
+        MYSQL_USER: approot
         MYSQL_PASSWORD: root123
         MYSQL_ROOT_PASSWORD: root123
     healthcheck:
