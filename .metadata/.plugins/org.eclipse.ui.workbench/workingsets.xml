@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1585291095885_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1585291095909_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1585291175081_3" label="gipher" name="gipher">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/gipherrecommendersystem" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/accountmanager" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/giphermanager" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/netflixeurekanamingserver" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/netflixzuulapigatewayserver" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1585291100733_2" label="Window Working Set" name="Aggregate for window 1585291100733"/>
+</workingSetManager>

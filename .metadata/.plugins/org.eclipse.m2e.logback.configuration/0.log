@@ -1,0 +1,28 @@
+2020-03-27 12:08:19,816 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-03-27 12:09:41,405 [Worker-7: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.stackroute:zuulapigatewayservice:1.0 @ C:\000001_MySBA_Mar26th\sweathv1-gipher-java-boilerplate\netflixzuulapigatewayserver\pom.xml.
+2020-03-27 12:09:45,298 [Worker-7: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.stackroute:giphermanager:1.0 @ C:\000001_MySBA_Mar26th\sweathv1-gipher-java-boilerplate\giphermanager\pom.xml.
+2020-03-27 12:09:46,052 [Worker-7: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.stackroute:netflixeurekanamingserver:1.0 @ C:\000001_MySBA_Mar26th\sweathv1-gipher-java-boilerplate\netflixeurekanamingserver\pom.xml.
+2020-03-27 12:09:46,803 [Worker-7: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.stackroute:gipherrecommendersystem:1.0 @ C:\000001_MySBA_Mar26th\sweathv1-gipher-java-boilerplate\gipherrecommendersystem\pom.xml.
+2020-03-27 12:09:47,381 [Worker-7: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.stackroute:accountmanager:1.0 @ C:\000001_MySBA_Mar26th\sweathv1-gipher-java-boilerplate\accountmanager\pom.xml.
+2020-03-27 12:09:50,578 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /giphermanager/src/main/java
+2020-03-27 12:09:50,578 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /giphermanager/src/main/resources
+2020-03-27 12:09:50,586 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /giphermanager/src/main/resources
+2020-03-27 12:09:50,597 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /giphermanager/src/test/java
+2020-03-27 12:09:52,645 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /gipherrecommendersystem/src/main/java
+2020-03-27 12:09:52,646 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /gipherrecommendersystem/src/main/resources
+2020-03-27 12:09:52,653 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /gipherrecommendersystem/src/main/resources
+2020-03-27 12:09:52,660 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /gipherrecommendersystem/src/test/java
+2020-03-27 12:09:53,110 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /netflixzuulapigatewayserver/src/main/java
+2020-03-27 12:09:53,110 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /netflixzuulapigatewayserver/src/main/resources
+2020-03-27 12:09:53,116 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /netflixzuulapigatewayserver/src/main/resources
+2020-03-27 12:09:53,123 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /netflixzuulapigatewayserver/src/test/java
+2020-03-27 12:09:53,831 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /accountmanager/src/main/java
+2020-03-27 12:09:53,832 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /accountmanager/src/main/resources
+2020-03-27 12:09:53,839 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /accountmanager/src/main/resources
+2020-03-27 12:09:53,848 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /accountmanager/src/test/java
+2020-03-27 12:09:54,467 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /netflixeurekanamingserver/src/main/java
+2020-03-27 12:09:54,468 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /netflixeurekanamingserver/src/main/resources
+2020-03-27 12:09:54,473 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /netflixeurekanamingserver/src/main/resources
+2020-03-27 12:09:54,480 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /netflixeurekanamingserver/src/test/java
+2020-03-27 12:09:54,806 [Worker-7: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 5 project(s) in 19 sec
+2020-04-14 11:17:15,337 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
