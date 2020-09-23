@@ -29,7 +29,7 @@ services:
       test: "exit 0"
 
   Gipher_gipherrecommendersystem:
-    image: sweathv1/gipherrecommender:v6
+    image: sweathv1/gipherrecommender:v7
     restart: always
     network_mode: host
     container_name: gipherrecommendersystemcontainer
